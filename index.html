@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pro Style — New Charts</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="crumb">CHARTS</div>
+    <div class="wallet">
+      <span>Main Wallet</span>
+      <span class="addr">0x38 ••• 0x69</span>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="title">
+      <h1>Pro Style<br/>with New Charts</h1>
+      <p>Stay on top of charts. All the time, any time!</p>
+    </div>
+
+    <section class="grid">
+      <!-- Left column cards -->
+      <article class="card kpi tall">
+        <div class="kpi-head">
+          <span class="dot purple"></span>
+          <span>Monthly Income</span>
+        </div>
+        <h2>5.98 K</h2>
+        <canvas class="spark" data-seed="1"></canvas>
+      </article>
+
+      <article class="card asset">
+        <div class="row space">
+          <div class="chip">Bitcoin <span class="muted">BTC</span></div>
+          <div class="value">$29,270</div>
+        </div>
+        <canvas class="mini-line" data-seed="2"></canvas>
+      </article>
+
+      <article class="card earnings">
+        <h3>Earnings</h3>
+        <div class="row space">
+          <div class="big">$8,900 <span class="muted">USD</span></div>
+          <div class="pill up">0.95%</div>
+        </div>
+        <canvas class="line" data-seed="3"></canvas>
+        <div class="xlabels">
+          <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+        </div>
+      </article>
+
+      <article class="card status">
+        <div class="row space">
+          <div class="label">Unauthorized</div>
+          <img class="avatar" alt="" src="https://i.pravatar.cc/80?img=14" />
+        </div>
+        <div class="percent">97.5%</div>
+        <div class="delta up">+0.25% from last week</div>
+      </article>
+
+      <article class="card track">
+        <h3>Month tracking</h3>
+        <div class="row space">
+          <div class="steps">3,894<span class="unit">/Steps</span></div>
+          <div class="pill info">18%</div>
+        </div>
+        <canvas class="mini-line" data-seed="4"></canvas>
+        <div class="mini-icons">
+          <span class="i">◷</span><span class="i">⚙</span><span class="i">⤴</span>
+        </div>
+      </article>
+
+      <!-- Center tall promo -->
+      <article class="card promo tall gradient">
+        <div class="promo-min">15<span class="sub">minutes</span></div>
+        <h4>How To set<br/>Intentions that<br/>Energise You</h4>
+        <div class="row stats">
+          <span>384 ❤</span><span>16 💬</span>
+        </div>
+        <div class="faces">
+          <img alt="" src="https://i.pravatar.cc/48?img=3">
+          <img alt="" src="https://i.pravatar.cc/48?img=5">
+          <img alt="" src="https://i.pravatar.cc/48?img=8">
+          <img alt="" src="https://i.pravatar.cc/48?img=10">
+        </div>
+      </article>
+
+      <!-- Right column widgets -->
+      <article class="card activity wide">
+        <h3>Activity</h3>
+        <div class="row space">
+          <div class="metric"><span class="muted">USD</span> $8,459<br/><span class="muted s">Monthly Income</span></div>
+          <div class="metric"><span class="muted">USD</span> $7,496<br/><span class="muted s">Monthly Spending</span></div>
+        </div>
+        <div class="bars">
+          <div class="bar-group" data-seed="5"></div>
+        </div>
+      </article>
+
+      <article class="card gauge">
+        <h3>Privacy</h3>
+        <div class="ring" data-value="82"><span>Great!</span></div>
+      </article>
+
+      <article class="card shop">
+        <div class="row space">
+          <div class="person">
+            <img class="avatar" alt="" src="https://i.pravatar.cc/80?img=47" />
+            <div class="name">Northern Legacy</div>
+          </div>
+          <button class="btn">Buy item</button>
+        </div>
+      </article>
+
+      <article class="card skills">
+        <div class="label small">Skills board (qn)</div>
+        <div class="big">2,80%</div>
+        <div class="legend">
+          <div><span class="dot purple"></span>Workout (GYM) – 42%</div>
+          <div><span class="dot blue"></span>Sleep (8h) – 36%</div>
+          <div><span class="dot orange"></span>Diet (9h) – 20%</div>
+        </div>
+      </article>
+
+      <article class="card donut">
+        <h3>Revenue State</h3>
+        <canvas class="donut-canvas" data-seed="6"></canvas>
+      </article>
+
+      <article class="card thermostat">
+        <div class="row space">
+          <div class="temp"><span class="muted">HEAT</span> 24°</div>
+          <div class="muted">Under 30 min left · 12%</div>
+        </div>
+        <div class="thermo">
+          <div class="fill"></div>
+        </div>
+      </article>
+
+      <article class="card radial">
+        <h3>Heart</h3>
+        <canvas class="radial-canvas" data-seed="7"></canvas>
+        <div class="row space foot">
+          <div class="muted">287 Pumping</div>
+          <div class="muted">196 Stops</div>
+        </div>
+      </article>
+
+      <article class="card dots">
+        <h3>Life health status</h3>
+        <div class="scale">
+          <span class="muted">LOW</span>
+          <div class="dot-row"></div>
+          <span class="muted">HIGH</span>
+        </div>
+      </article>
+
+      <article class="card timeline">
+        <div class="row space">
+          <div class="muted">00:13:23</div>
+        </div>
+        <canvas class="wave" data-seed="8"></canvas>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

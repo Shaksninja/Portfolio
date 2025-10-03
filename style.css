@@ -1,0 +1,169 @@
+:root{
+  --bg:#0b0e13;
+  --panel:#12151d;
+  --panel-2:#0f1219;
+  --text:#d5d8e1;
+  --muted:#8b90a1;
+  --line:#202433;
+  --purple:#7b5cff;
+  --purple-2:#9b7cff;
+  --blue:#4aa3ff;
+  --orange:#ff9d4d;
+  --green:#3bd88f;
+  --red:#ff5865;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+  background:radial-gradient(1200px 800px at 70% -10%, #1a1730 0%, transparent 60%), var(--bg);
+  color:var(--text);
+}
+
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 28px;border-bottom:1px solid var(--line);
+  position:sticky;top:0;background:linear-gradient(180deg, rgba(11,14,19,.95), rgba(11,14,19,.7));
+  backdrop-filter:saturate(120%) blur(8px); z-index:50;
+}
+.crumb{letter-spacing:.25em;color:var(--purple);font-weight:700;font-size:.75rem}
+.wallet{display:flex;gap:10px;align-items:center;color:var(--muted)}
+.addr{padding:.25rem .5rem;background:#0e1320;border-radius:8px;border:1px solid #1f2740}
+
+.hero{max-width:1280px;margin:20px auto;padding:10px 16px}
+.title h1{
+  margin:10px 0 0;font-size:56px;line-height:1.0;font-weight:800;
+  background:linear-gradient(180deg,#e7e9f2 0%,#9aa1b7 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.title p{color:var(--muted);margin:8px 0 22px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:18px;
+}
+
+.card{
+  background:linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  border:1px solid #1a1f2e;border-radius:18px;padding:16px;box-shadow:var(--shadow);
+  position:relative;overflow:hidden;
+}
+.card h3{margin:2px 0 10px 0;font-weight:700}
+.card .muted{color:var(--muted)}
+.card .row{display:flex;align-items:center;gap:12px}
+.card .row.space{justify-content:space-between}
+.card .big{font-size:28px;font-weight:800}
+.card .pill{padding:.2rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid #2b3044;background:#13182a}
+.pill.up{color:#8df1c3;border-color:#23523e;background:#0f1f1a}
+.pill.info{color:#a7c3ff;border-color:#2b3b76;background:#10162b}
+.btn{background:#191f2e;color:#e9edff;border:1px solid #2b3350;border-radius:12px;padding:.6rem .9rem;cursor:pointer}
+.btn:hover{border-color:#445092}
+
+.kpi{grid-column: span 3; min-height:210px}
+.kpi.tall{grid-row: span 2}
+.asset{grid-column: span 3}
+.earnings{grid-column: span 4}
+.status{grid-column: span 3}
+.track{grid-column: span 4}
+.promo{grid-column: span 3; display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:20px}
+.promo.tall{grid-row: span 2}
+.activity.wide{grid-column: span 5}
+.gauge{grid-column: span 2; display:flex;flex-direction:column;align-items:center;justify-content:center}
+.shop{grid-column: span 2}
+.skills{grid-column: span 3}
+.donut{grid-column: span 2}
+.thermostat{grid-column: span 3}
+.radial{grid-column: span 3}
+.dots{grid-column: span 3}
+.timeline{grid-column: span 4}
+
+.gradient{
+  background:linear-gradient(180deg,#3a2cff 0%, #6b47ff 40%, #1a1f31 85%);
+  color:#eef1ff;
+}
+.promo-min{font-size:54px;font-weight:800}
+.promo-min .sub{font-size:14px;margin-left:6px;color:#e6e3ffcc}
+.promo h4{margin:6px 0 8px 0;line-height:1.15}
+.promo .stats{gap:18px;color:#ecebffcc}
+.faces img{width:28px;height:28px;border-radius:50%;border:2px solid #bdb7ff22;margin-right:-8px;background:#26213f}
+
+.kpi-head{display:flex;align-items:center;gap:10px;color:var(--muted)}
+.kpi h2{font-size:36px;margin:4px 0 8px 0}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.dot.purple{background:linear-gradient(180deg,var(--purple),var(--purple-2))}
+.dot.blue{background:linear-gradient(180deg,#3b86d1,#4aa3ff)}
+.dot.orange{background:linear-gradient(180deg,#ffb469,#ff8a3d)}
+
+.asset .chip{padding:.35rem .6rem;border-radius:10px;background:#0f1322;border:1px solid #1f2740}
+.asset .value{font-weight:700}
+
+.percent{font-size:40px;font-weight:800}
+.delta{font-size:.8rem;color:#84f1c9}
+.delta.up::before{content:"▲ ";color:#3bd88f}
+
+.steps{font-size:26px;font-weight:800}
+.steps .unit{font-size:14px;color:var(--muted);margin-left:4px}
+.mini-icons .i{opacity:.7;margin-right:10px}
+
+.activity .metric{font-weight:700}
+.bars{margin-top:14px}
+.bar-group{display:flex;gap:10px;align-items:flex-end;height:90px}
+.bar-group .bar{width:16px;border-radius:6px;background:#21263a;position:relative;overflow:hidden}
+.bar .fill{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,#4aa3ff,#7b5cff)}
+
+.gauge .ring{
+  width:160px;height:160px;border-radius:50%;
+  background:conic-gradient(#7b5cff 0 280deg, #1f2435 280deg 360deg);
+  display:grid;place-items:center;position:relative;
+}
+.gauge .ring::after{
+  content:"";position:absolute;inset:12px;border-radius:50%;background:#0f1219;border:1px solid #242a3f;
+}
+.gauge .ring span{position:relative;z-index:1;color:#dbe1ff}
+
+.shop .person{display:flex;align-items:center;gap:10px}
+.shop .avatar{width:44px;height:44px;border-radius:12px}
+
+.skills .big{font-size:38px}
+.skills .legend{margin-top:8px;color:#bfc5db}
+.skills .legend div{margin-top:6px}
+
+.thermostat .thermo{height:10px;background:#1b2032;border:1px solid #232a44;border-radius:999px;overflow:hidden;margin-top:10px}
+.thermostat .fill{height:100%;width:12%;background:linear-gradient(90deg,#ff7a59,#ffb469)}
+
+.radial canvas{width:100%;height:160px}
+.radial .foot{margin-top:8px}
+
+.dots .scale{display:flex;align-items:center;gap:12px}
+.dots .dot-row{flex:1;display:flex;gap:8px}
+.dots .dot-row::before,
+.dots .dot-row::after{
+  content:"";flex:1;height:8px;border-radius:999px;background:
+    radial-gradient(circle at 0% 50%, #7b5cff .5px, transparent 1px),
+    radial-gradient(circle at 50% 50%, #7b5cff .5px, transparent 1px),
+    radial-gradient(circle at 100% 50%, #7b5cff .5px, transparent 1px);
+  background-size:16px 8px;background-repeat:repeat-x;opacity:.6
+}
+
+.timeline .wave{width:100%;height:60px}
+
+/* Canvas sizes */
+.spark,.mini-line,.line{width:100%;height:90px;display:block}
+.kpi .spark{height:120px}
+.donut-canvas{width:100%;height:150px}
+
+/* Responsive */
+@media (max-width:1024px){
+  .grid{grid-template-columns:repeat(8,1fr)}
+  .promo{grid-column: span 4}
+  .activity.wide{grid-column: span 8}
+}
+@media (max-width:720px){
+  .title h1{font-size:38px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .card{padding:14px}
+}
